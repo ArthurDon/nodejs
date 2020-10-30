@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>Seção 04 - Aula 13</title>
+        <meta charset="utf-8">
+
+    </head>
+
+    <body>
+        <h1>Seção 04 - Aula 13</h1>
+
+        <script>
+            // Escopo de variaveis
+
+            var teste = 42; // VARIAVEL GLOBAL
+
+            function somar(num1, num2){
+                //variavel LOCAL ( só é reconhecida dentro do bloco da função )
+                var valor = 5;
+                return valor + num2 + num1;
+            }
+
+            for(var i = 0; i < 5; i++){
+                var outra = 5; // Variavel global
+                console.log(i * outra);
+            }
+
+            console.log(somar(4, 6));
+
+
+            //console.log(valor); // ReferenceError
+
+            console.log(outra); // temos acesso, pois foi declarada em um bloco FOR
+            console.log(i);
+
+            for(var j = 0; j<5; j++){
+                let uma = 12; //variavel local com let
+                console.log(j * uma);
+            }
+
+            //console.log(uma); let vira variavel local
+            console.log(j);
+
+            
+            
+
+        </script>
+
+    </body>
+
+</html>
